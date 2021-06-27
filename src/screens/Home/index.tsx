@@ -42,7 +42,7 @@ export function Home(){
 			category: '1',
 			date: '22/06 às 20:40h',
 			description: 'é hoje que vamos chegar ao Challenger sem perder'
-		}
+		},
 	]
 
 	function handleCategorySelect(categoryId: string) {
@@ -69,26 +69,25 @@ export function Home(){
         setCategory={handleCategorySelect}
       />
 
-			<View style={styles.content}>
-				<ListHeader 
-					title="Partidas agendadas"
-					subtitle="total 6"
-				/>
-
-				<FlatList
-					data={appointment}
-					keyExtractor={item => item.id}
-					renderItem={({ item }) =>(
-						<Appointment 
-							data={item} 
-							onPress={handleDetails}
-						/>					
-					)}
-					ItemSeparatorComponent ={() => <ListDivider />}
-					style={styles.matches}
-					showsVerticalScrollIndicator={false}
-				/>
-			</View>		
+		<ListHeader 
+			title="Partidas agendadas"
+			subtitle="total 6"
+		/>
+		
+		<FlatList
+			data={appointment}
+			keyExtractor={item => item.id}
+			renderItem={({ item }) =>(
+				<Appointment 
+					data={item} 
+					onPress={handleDetails}
+				/>					
+			)}
+			ItemSeparatorComponent ={() => <ListDivider />}
+			contentContainerStyle={{ paddingBottom: 69 }}
+			style={styles.matches}
+			showsVerticalScrollIndicator={false}
+		/>	
     </Background>
   );
 }

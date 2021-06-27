@@ -24,24 +24,48 @@ export function Guilds({ handleGuildSelect }: Props){
 		  name: 'Galera do Game',
 		  icon: 'image.png',
 		  owner: true
-		}
+		},
+		{
+			id: '3',
+			name: 'Galera do Game',
+			icon: 'image.png',
+			owner: true
+		 },
+		 {
+			id: '4',
+			name: 'Galera do Game',
+			icon: 'image.png',
+			owner: true
+		 },
+		 {
+			id: '5',
+			name: 'Galera do Game',
+			icon: 'image.png',
+			owner: true
+		 },
+		 {
+			id: '6',
+			name: 'Galera do Game',
+			icon: 'image.png',
+			owner: true
+		 },
 	 ];
 
-	 return (
+	return (
 		<View style={styles.container}>
-		  <FlatList 
-			 data={guilds}
-			 keyExtractor={item => item.id}
-			 renderItem={({ item }) => (
+			<FlatList 
+				data={guilds}
+				keyExtractor={item => item.id}
+				renderItem={({ item }) => (
 				<Guild 
-				  data={item} 
-				  onPress={() => handleGuildSelect(item)}
+					data={item} 
+					onPress={() => handleGuildSelect(item)}
 				/>
-			 )}    
-			 showsVerticalScrollIndicator={false}
-			 ItemSeparatorComponent={() => <ListDivider />}
-			 style={styles.guilds}
-		  />
+				)}    
+				showsVerticalScrollIndicator={false}
+				ItemSeparatorComponent={() => <ListDivider />}
+				style={styles.guilds}
+			/>
 		</View>
-	 );
+	);
 }

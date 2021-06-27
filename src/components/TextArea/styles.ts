@@ -12,6 +12,10 @@ export const styles = StyleSheet.create({
 		fontSize: 15,
 		marginRight: 4,
 		textAlign: 'justify',
-		padding: 10,
+		borderWidth: 1,
+		borderColor: theme.colors.secondary050,
+		paddingHorizontal: 16,
+		paddingTop: 16,
+		textAlignVertical: 'top',
 	},
 });

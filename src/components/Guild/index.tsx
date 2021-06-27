@@ -23,7 +23,7 @@ type Props = TouchableOpacityProps & {
 	data: GuildProps;
 }
 
-export function Guild({data, ...rest} : Props){
+export function Guild({data, ...rest}: Props){
 	return(
 		<TouchableOpacity
 			style={styles.container}
