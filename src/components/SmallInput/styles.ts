@@ -2,12 +2,15 @@ import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/globalTheme';
 
 export const styles = StyleSheet.create({
-  container: {
-    width: '75%',
-		height: 1,
+	container: {
+		width: 48,
+		height: 48,
 		backgroundColor: theme.colors.secondary040,
-		marginTop: 2,
-		marginVertical: 31,
-		alignSelf: 'flex-end',
-  },
+		borderRadius: 8,
+		fontFamily: theme.fonts.text400,
+		color: theme.colors.heading,
+		fontSize: 13,
+		marginRight: 4,
+		textAlign: 'center',
+	},
 });

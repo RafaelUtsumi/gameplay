@@ -8,11 +8,13 @@ import { styles } from './styles';
 type Props = {
 	categorySelected: string;
 	setCategory: (categoryId: string) => void;
+	hascheckBox? : boolean;
 }
 
 export function CategorySelect({
 	categorySelected,
 	setCategory,
+	hascheckBox = false,
 }: Props){
 
     return(
@@ -30,6 +32,7 @@ export function CategorySelect({
 							icon={category.icon}
 							checked={category.id === categorySelected}
 							onPress= {() => setCategory(category.id)}
+							hascheckBox={hascheckBox}
 						/>
 					))	
 
