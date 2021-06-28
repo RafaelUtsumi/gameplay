@@ -1,28 +1,27 @@
 import React from 'react';
-import { 
-  Image,
-} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { theme } from '../../global/styles/globalTheme';
+import { Image } from 'react-native';
+
 import { styles } from './styles';
+import { theme } from '../../global/styles/globalTheme';
 
 type Props = {
-	urlImage: string;
+  urlImage: string;
 }
 
-export function Avatar({urlImage}: Props) {
-	const { secondary080, secondary100 } = theme.colors;
+export function Avatar({ urlImage }: Props) {
+  const { secondary050, secondary070 } = theme.colors;
 
-	return (
-		<LinearGradient
-			style = { styles.container }
-			colors = {[secondary080, secondary100]}
-		>
-			<Image
-				source={{ uri: urlImage}}
-				style={styles.avatar}
-			/>
-		</LinearGradient>
-	)
+  return (
+    <LinearGradient
+      style={styles.container}
+      colors={[secondary050, secondary070]}
+    >
+      <Image 
+        source={{ uri: urlImage }}
+        style={styles.avatar}
+      />
+    </LinearGradient>
+  )
 
 }

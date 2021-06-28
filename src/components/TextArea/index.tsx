@@ -8,6 +8,6 @@ export function TextArea({...rest}: TextInputProps){
     <TextInput 
       style={styles.container}
       {...rest}
-    /> 
+    />
   );
 }

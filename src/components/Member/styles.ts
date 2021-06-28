@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
 		flexDirection: 'row',
 		alignItems: 'center',
 	},
-	bulletSatatus: {
+	bulletStatus: {
 		width: 8,
 		height: 8,
 		borderRadius: 4,

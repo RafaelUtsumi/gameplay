@@ -10,35 +10,35 @@ import { theme } from '../../global/styles/globalTheme';
 type Props = RectButtonProps & {
   title: string;
   icon: React.FC<SvgProps>;
-	hascheckBox?: boolean,
+  hasCheckBox?: boolean;
   checked?: boolean;
 }
 
 export function Category({
   title,
   icon: Icon,
-   checked = false,
-	 hascheckBox = false,
+  checked = false,
+  hasCheckBox = false,
   ...rest
 }: Props){
-  const { secondary040 ,secondary050, secondary070, secondary085 } = theme.colors;
+  const { secondary040, secondary050, secondary070, secondary085 } = theme.colors;
 
   return(
     <RectButton {...rest}>
       <LinearGradient
-      style={styles.container}
-      colors={[secondary050, secondary070]}
+        style={styles.container}
+        colors={[secondary050, secondary070]}
       >
         <LinearGradient 
-					style={[styles.content, { opacity: checked ? 1 : 0.4 }]}
-					colors= {[ checked ? secondary085 : secondary050, secondary040 ]}
-				>
+          style={[styles.content, { opacity: checked ? 1 : 0.5 }]}
+          colors={[ checked ? secondary085 : secondary050, secondary040 ]}
+        >
           {
-						hascheckBox &&
-						<View style={
-							checked ? styles.checked : styles.check
-						}/>
-					}
+            hasCheckBox &&
+            <View style={
+              checked ? styles.checked : styles.check
+            }/>
+          }
 
           <Icon 
               width={48} 
