@@ -112,7 +112,7 @@ export function AppointmentDetails() {
           <>
             <ListHeader
               title="Jogadores"
-              subtitle={`Total ${widget.members.length ? widget.members.length : 0}`}
+              subtitle="Total 6"
             />
             {
               <FlatList
